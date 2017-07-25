@@ -1,14 +1,14 @@
-import { MyAppPage } from './app.po';
+import { Project2Page } from './app.po';
 
-describe('my-app App', () => {
-  let page: MyAppPage;
+describe('project2 App', () => {
+  let page: Project2Page;
 
   beforeEach(() => {
-    page = new MyAppPage();
+    page = new Project2Page();
   });
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Bem Vindo a Delinea!');
+    expect(page.getParagraphText()).toEqual('Welcome to app!');
   });
 });
