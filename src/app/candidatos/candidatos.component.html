@@ -1,0 +1,36 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="row">
+  <div class="col-md-12">
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseEntrada" aria-expanded="false" aria-controls="collapseEntrada">
+    <i class="fa fa-sign-in" aria-hidden="true"></i> Entrada
+    </button>
+    <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#collapseSaida" aria-expanded="false" aria-controls="collapseSaida"><i class="fa fa-sign-out" aria-hidden="true"></i> Saida</button>
+    <div class="collapse" id="collapseEntrada">
+      <div class="well">
+        <form name="formEntrada">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="placaVeiculo">Placa do Veículo</label>
+                <input type="text" class="form-control" name="placaVeiculo" placeholder="" ng-model="modelAux" ui-br-cpf-mask required>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="placaVeiculo">Horário de Chegada <span class="label label-info cPointer" ng-click="modelAux.chegada = tools.setTime()" title="Preencher com horário Atual"><i class="fa fa-clock-o" aria-hidden="true"></i></span></label>
+                <input type="text" class="form-control" name="placaVeiculo" placeholder="ex: 01/01/2017 11:43:34" ng-model="modelAux.chegada" required>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="alert alert-danger" ng-show="msg"></div>
+            </div>
+          </div>
+          <div class="text-right">
+            <button class="btn btn-success" type="button" ng-click="tools.addVeiculo()"><i class="fa fa-plus"></i> Cadastrar Entrada</button>
+            <button class="btn btn-danger" type="button" ng-click="tools.clearEntrada()"><i class="fa fa-ban"></i> Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -3,21 +3,24 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from  '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+
 import { AppComponent } from './app.component';
 import { LoginCandidatoComponent } from './login-candidato/login-candidato.component';
+import { CandidatosModule } from './candidatos/candidatos.module';
+import { CandidatosComponent } from './candidatos/candidatos.component';
 
-import { CandidatoComponent } from './candidato/candidato.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-	LoginCandidatoComponent,
-	CandidatoComponent
+	  LoginCandidatoComponent,
+    CandidatosComponent,
   ],
   imports: [
     BrowserModule,
-	FormsModule,
-	HttpModule
+	  FormsModule,
+	  HttpModule,
+    CandidatosModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
