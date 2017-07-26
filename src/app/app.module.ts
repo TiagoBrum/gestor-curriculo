@@ -7,22 +7,20 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { LoginCandidatoComponent } from './login-candidato/login-candidato.component';
 import { CandidatosModule } from './candidatos/candidatos.module';
-import { CandidatosComponent } from './candidatos/candidatos.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
 	  LoginCandidatoComponent,
-    CandidatosComponent,
   ],
   imports: [
-    BrowserModule,
+      BrowserModule,
 	  FormsModule,
 	  HttpModule,
-    CandidatosModule,
+      CandidatosModule,
   ],
-  providers: [],
+  providers: [HttpModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -2,27 +2,27 @@
   <div class="col-md-12">
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <h3 class="panel-title"><i class="fa fa-car"></i> Can</h3>
+        <h3 class="panel-title"><i class="fa fa-users"></i> Lista de Candidatos</h3>
       </div>
       <div class="panel-body">
         <table class="table table-striped">
           <thead>
             <tr>
               <th>Nome</th>
-              <th>Telefone</th>
               <th>E-mail</th>
+              <th>Telefone</th>
               <th>Ações</th>
             </tr>
           </thead>
           <tbody>
-            <tr ng-repeat="car in modelEstacionamento track by $index">
-              <th scope="row"></th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+            <tr *ngFor="let candidato of listaCandidatos">
+              <th scope="row">{{candidato.full_name}}</th>
+              <td>{{candidato.email}}</td>
+              <td>{{candidato.phone}}</td>
+              <td>
+              	<button type="button" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></button>
+              	<button type="button" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
+              </td>
             </tr>
           </tbody>
         </table>

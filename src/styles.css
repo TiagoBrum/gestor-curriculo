@@ -45,6 +45,10 @@
 	text-align: right;
 }
 
+.text-capitalize {
+	font-style: captilize;
+}
+
 .cPointer{
 	cursor: pointer;
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { CandidatosService } from '../candidatos.service';
+
 @Component({
   selector: 'app-candidatos-lista',
   templateUrl: './candidatos-lista.component.html',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CandidatosListaComponent implements OnInit {
 
-  constructor() { }
+  listaCandidatos = Array();
+  
+  constructor( private candidatosService: CandidatosService ) { }
 
   ngOnInit() {
+    this.listaCandidatos = this.candidatosService.getCandidatos();
   }
 
 }
